@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northlight Apps</title>
+<meta name="description" content="Northlight Apps — маленькая студия приложений для Mac.">
+<meta property="og:title" content="Northlight Apps">
+<meta property="og:description" content="Маленькая студия приложений для Mac.">
+<link rel="icon" href="notchisland-icon.png">
+<style>
+  :root { --bg: #050507; --fg: #fff; --dim: rgba(255,255,255,.55); --card: rgba(255,255,255,.04); --line: rgba(255,255,255,.1); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.5 -apple-system, "SF Pro Display", "Helvetica Neue", sans-serif; -webkit-font-smoothing: antialiased; }
+  .bg { position: fixed; inset: 0; z-index: -1;
+    background: radial-gradient(ellipse at 20% 0%, rgba(90,120,255,.28), transparent 55%),
+                radial-gradient(ellipse at 90% 100%, rgba(60,220,190,.16), transparent 55%), var(--bg); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 96px 0 56px; }
+  .logo { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; letter-spacing: -.2px; }
+  .mark { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(160deg, #6E8BFF, #3DE0C0); box-shadow: 0 0 30px rgba(110,139,255,.5); position: relative; }
+  .mark::after { content: ""; position: absolute; left: 7px; right: 7px; top: 12px; height: 6px; border-radius: 3px; background: #050507; }
+  h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.02; letter-spacing: -2.5px; margin: 28px 0 16px; }
+  h1 span { background: linear-gradient(90deg, #8FA6FF, #5FE6CC); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { color: var(--dim); font-size: 20px; max-width: 560px; margin: 0; }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--dim); font-weight: 600; margin: 0 0 16px; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .app { display: flex; gap: 18px; align-items: center; padding: 20px; border-radius: 22px; background: var(--card);
+    box-shadow: inset 0 0 0 1px var(--line); color: inherit; text-decoration: none; transition: transform .2s, background .2s; }
+  .app:hover { transform: translateY(-2px); background: rgba(255,255,255,.07); }
+  .app img { width: 64px; height: 64px; border-radius: 15px; flex: none; }
+  .app b { display: block; font-size: 19px; }
+  .app p { margin: 2px 0 0; color: var(--dim); font-size: 15px; line-height: 1.35; }
+  .soon { opacity: .5; pointer-events: none; }
+  .soon .ph { width: 64px; height: 64px; border-radius: 15px; flex: none; box-shadow: inset 0 0 0 1.5px var(--line); display: grid; place-items: center; font-size: 26px; color: var(--dim); }
+  footer { padding: 72px 0 40px; color: rgba(255,255,255,.38); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="wrap">
+  <header>
+    <div class="logo"><div class="mark"></div>Northlight Apps</div>
+    <h1>Маленькие приложения<br>для <span>Mac</span></h1>
+    <p class="lead">Делаем простые и красивые инструменты, которые хочется держать включёнными. Бесплатно и без рекламы.</p>
+  </header>
+
+  <section>
+    <h2>Приложения</h2>
+    <div class="apps">
+      <a class="app" href="notchisland/">
+        <img src="notchisland-icon.png" alt="">
+        <div><b>NotchIsland</b><p>Dynamic Island для MacBook: музыка, таймер, календарь и уведомления в челке.</p></div>
+      </a>
+      <div class="app soon">
+        <div class="ph">+</div>
+        <div><b>Скоро</b><p>Следующий проект уже в работе.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Northlight Apps</span>
+    <span><a href="https://www.instagram.com/notchisland.app/">Instagram</a></span>
+  </footer>
+</div>
+</body>
+</html>
